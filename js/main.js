@@ -290,9 +290,8 @@
       // for (const [key, value] of Object.entries(customFields)) {
       //     formData.append(key, value);
       // }
-      var responseMessage;
         // 3. Send the data asynchronously using Fetch
-      fetch("https://formsubmit.co/el/bugije", {
+      fetch("https://formsubmit.co/el/confirm/69a8e1f89e206f3feae2871e0cea0b74", {
           method: 'POST',
           body: formData,
           headers: {
