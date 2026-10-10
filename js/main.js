@@ -302,17 +302,18 @@
       .then(response => response.json())
       .then(data => {
           // Success logic
-          responseMessage.textContent = "Thank you! Your message has been sent.";
+          document.getElementById("formNote").textContent = "Thanks — your message is on its way. I'll be in touch within two working days.";
+          if (note) note.classList.remove("err");
+          if (note) note.classList.add("show");
           form.reset(); // Clear the form fields
       })
       .catch(error => {
           // Error logic
-          responseMessage.textContent = "Oops! There was a problem submitting your form.";
+          if (note) note.classList.remove("show");
+          if (note) note.classList.add("err");
+          document.getElementById("formNote").textContent = "Oops! There was a problem submitting your form.";
           console.error('Error:', error);
       });
-
-      if (note) note.classList.add("show");
-      form.reset();
     });
 
     // clear invalid state as the user fixes fields
