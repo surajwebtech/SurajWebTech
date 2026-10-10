@@ -250,9 +250,15 @@
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
+    // 2. Automatically gather all the form's input values
+    const formData = new FormData(form);
+
       var name = form.querySelector("#cf-name");
       var email = form.querySelector("#cf-email");
       var msg = form.querySelector("#cf-msg");
+      // var p_lang = form.querySelector("#cf-type");
+      // var budget = form.querySelector("#cf-budget");
       var ok = true;
 
       if (name && !name.value.trim()) { setInvalid(name, true); ok = false; } else if (name) setInvalid(name, false);
@@ -265,6 +271,45 @@
         if (note) note.classList.remove("show");
         return;
       }
+      // var message = msg.value+"<br> p_lang:"+p_lang.value+"<br> budget:"+budget.value;
+      // // 1. Create your object with all the custom fields you want to set
+      // const customFields = {
+      //     name: name,
+      //     email: email,
+      //     message: message,
+      //     department: "Sales",
+      //     newsletter_opt_in: "Yes",
+      //     _captcha: "false",            // FormSubmit setting
+      //     _subject: "Website Inquiry"   // FormSubmit setting
+      // };
+
+      // // 2. Initialize your FormData object
+      // const formData = new FormData();
+
+      // // 3. Loop through the object and set multiple fields automatically
+      // for (const [key, value] of Object.entries(customFields)) {
+      //     formData.append(key, value);
+      // }
+      var responseMessage;
+        // 3. Send the data asynchronously using Fetch
+      fetch("https://formsubmit.co/ajax/suraj&#46;webdev&commat;yahoo&#46;com", {
+          method: 'POST',
+          body: formData,
+          headers: {
+              'Accept': 'application/json'
+          }
+      })
+      .then(response => response.json())
+      .then(data => {
+          // Success logic
+          responseMessage.textContent = "Thank you! Your message has been sent.";
+          form.reset(); // Clear the form fields
+      })
+      .catch(error => {
+          // Error logic
+          responseMessage.textContent = "Oops! There was a problem submitting your form.";
+          console.error('Error:', error);
+      });
 
       if (note) note.classList.add("show");
       form.reset();
