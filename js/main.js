@@ -292,7 +292,7 @@
       // }
       var responseMessage;
         // 3. Send the data asynchronously using Fetch
-      fetch("https://formsubmit.co/ajax/suraj&#46;webdev&commat;yahoo&#46;com", {
+      fetch("https://formsubmit.co/el/bugije", {
           method: 'POST',
           body: formData,
           headers: {
