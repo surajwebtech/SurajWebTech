@@ -271,28 +271,7 @@
         if (note) note.classList.remove("show");
         return;
       }
-      // var message = msg.value+"<br> p_lang:"+p_lang.value+"<br> budget:"+budget.value;
-      // // 1. Create your object with all the custom fields you want to set
-      // const customFields = {
-      //     name: name,
-      //     email: email,
-      //     message: message,
-      //     department: "Sales",
-      //     newsletter_opt_in: "Yes",
-      //     _captcha: "false",            // FormSubmit setting
-      //     _subject: "Website Inquiry"   // FormSubmit setting
-      // };
-
-      // // 2. Initialize your FormData object
-      // const formData = new FormData();
-
-      // // 3. Loop through the object and set multiple fields automatically
-      // for (const [key, value] of Object.entries(customFields)) {
-      //     formData.append(key, value);
-      // }
-        // 3. Send the data asynchronously using Fetch
-      // fetch("https://formsubmit.co/el/confirm/69a8e1f89e206f3feae2871e0cea0b74", {
-      fetch("https://formsubmit.co/suraj.webdev@yahoo.com", {
+      fetch("https://formsubmit.co/7290f1c12d1c3995c568351b7ce38424", {
           method: 'POST',
           body: formData,
           headers: {
