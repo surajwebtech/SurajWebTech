@@ -1,2 +1,1 @@
-# SurajWebTech 
 Personal portfolio website showcasing my skills, experience, and projects in PHP, Laravel, CodeIgniter, WordPress, Vue.js, MySQL, REST APIs, and full-stack web development.

@@ -291,7 +291,8 @@
       //     formData.append(key, value);
       // }
         // 3. Send the data asynchronously using Fetch
-      fetch("https://formsubmit.co/el/confirm/69a8e1f89e206f3feae2871e0cea0b74", {
+      // fetch("https://formsubmit.co/el/confirm/69a8e1f89e206f3feae2871e0cea0b74", {
+      fetch("https://formsubmit.co/suraj.webdev@yahoo.com", {
           method: 'POST',
           body: formData,
           headers: {

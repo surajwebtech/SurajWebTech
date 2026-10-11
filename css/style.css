@@ -1127,12 +1127,16 @@ main { display: block; }
   border-radius: var(--r);
   background: var(--success-l);
   border: 1px solid rgba(5, 150, 105, 0.3);
-  color: #065F46;
   font-weight: 600;
   font-size: .94rem;
   display: none;
 }
-.form-note.show { display: block; }
+.form-note.show { display: block;
+                  color: #065F46;
+ }
+ .form-note.err { display: block;
+                  color: #e00505;
+ }
 
 /* ------------------------------------------------------------- footer --- */
 .site-footer {
